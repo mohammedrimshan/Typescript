@@ -1,0 +1,4 @@
+typescript is super set of javascript.
+Detects errors in code without running it.
+It need to be converted to js to run.
+the compilation process removes all the types.
