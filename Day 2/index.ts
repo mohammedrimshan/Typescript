@@ -91,3 +91,70 @@ const userRoles = {
 
 let role1: RoleKeys = "admin";
 let role2: RoleKeys = "guest"; 
+
+//Utility type
+
+type Users = {
+   name:string;
+   age:number;
+};
+
+const uDetial : Users={
+name:"Rimshan",
+age:20
+}
+
+uDetial.age = 31;
+
+//ReadOnly Type
+
+type Userss = {
+   name:string;
+   age:number;
+};
+
+const uDetials : Readonly<Userss>={
+name:"Rimshan",
+age:20
+}
+
+
+//Partial 
+
+type Usersss = {
+   name:string;
+   age:number;
+};
+
+const uDetialss : Partial<Usersss>={
+name:"Rimshan",
+age:20
+}
+
+
+//Pick
+
+const user:Pick<Users,"name">={
+   name:"Rimshan"
+}
+
+//Exclude 
+
+type StatType = "pending" | "completed" | "failed";
+const statusz:Exclude<StatType,"pending"> = "completed";
+
+//Record 
+
+// type Food= {
+//    KFC:string;
+//    Pizza:string;
+//    Chicken:string;
+// }
+
+type Food = Record<string,any>;
+
+const food:Food={
+   KFC:"string",
+   Pizza:"string",
+   Chicken:"string",
+}
